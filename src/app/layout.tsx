@@ -3,7 +3,6 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import { Toaster } from "@/components/ui/sonner";
-import { brand } from "@/config/brand";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,8 +10,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: brand.name,
-  description: `${brand.name} is ${brand.description.toLowerCase()}`,
+  title: "DPO Central",
+  description: "DPO Central is a single source of truth for your privacy management program.",
 };
 
 export default function RootLayout({

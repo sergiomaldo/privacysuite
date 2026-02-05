@@ -33,8 +33,6 @@ import {
 } from "@/components/ui/sheet";
 import { useOrganization } from "@/lib/organization-context";
 import { OrganizationSetup } from "@/components/privacy/organization-setup";
-import { brand } from "@/config/brand";
-import { LanguageSwitcher } from "@/components/ui/language-switcher";
 
 const navItems = [
   { href: "/privacy", label: "Dashboard", icon: LayoutDashboard },
@@ -89,7 +87,7 @@ export default function DashboardLayout({
               <SheetContent side="left" className="w-[280px] sm:w-[320px]">
                 <SheetHeader>
                   <SheetTitle className="flex items-center gap-2">
-                    <img src={brand.logoPath} alt={brand.name} className="h-8" />
+                    <img src="/nel-icon.png" alt="DPO Central" className="h-8" />
                   </SheetTitle>
                 </SheetHeader>
                 <nav className="mt-6 flex flex-col gap-1">
@@ -145,7 +143,7 @@ export default function DashboardLayout({
             </Sheet>
 
             <Link href="/privacy" className="flex items-center shrink-0">
-              <img src={brand.logoPath} alt={brand.name} className="h-8" />
+              <img src="/nel-icon.png" alt="DPO Central" className="h-8" />
             </Link>
 
             {/* Organization Selector - Desktop */}
@@ -197,7 +195,6 @@ export default function DashboardLayout({
 
           {/* Right side actions */}
           <div className="flex items-center gap-1 sm:gap-2 shrink-0">
-            <LanguageSwitcher />
             <div className="hidden sm:flex items-center gap-2 text-sm text-muted-foreground">
               <User className="w-4 h-4" />
               <span className="hidden lg:inline max-w-[150px] truncate">{session?.user?.email}</span>
@@ -222,12 +219,12 @@ export default function DashboardLayout({
       {/* Footer */}
       <footer className="border-t border-border mt-auto py-4">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 text-center text-xs text-muted-foreground space-y-1">
-          <p>{brand.name} is a {brand.companyName} service.</p>
+          <p>DPO Central is a North End Law service.</p>
           <div className="flex justify-center gap-4">
-            <a href={brand.termsOfUseUrl} target="_blank" rel="noopener noreferrer" className="hover:text-foreground underline">
+            <a href="https://northend.law/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-foreground underline">
               Terms of Use
             </a>
-            <a href={brand.privacyPolicyUrl} target="_blank" rel="noopener noreferrer" className="hover:text-foreground underline">
+            <a href="https://northend.law/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-foreground underline">
               Privacy Policy
             </a>
           </div>

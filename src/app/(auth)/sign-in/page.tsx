@@ -5,7 +5,6 @@ import { signIn } from "next-auth/react";
 import { Mail, ArrowRight, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { brand } from "@/config/brand";
 
 const isDev = process.env.NODE_ENV === "development";
 
@@ -102,16 +101,16 @@ export default function SignInPage() {
     <div className="w-full max-w-md">
       <div className="card-brutal">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold mb-2 text-white uppercase tracking-wide">{brand.name}</h1>
+          <h1 className="text-3xl font-bold mb-2 text-white uppercase tracking-wide">DPO Central</h1>
           <p className="text-muted-foreground mb-4">
-            {brand.description}, powered by{" "}
+            A single source of truth for your privacy management program, powered by{" "}
             <a
-              href={brand.companyWebsite}
+              href="https://northend.law"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
             >
-              {brand.companyName}
+              North End Law
             </a>
           </p>
           <p className="text-muted-foreground text-sm">
@@ -237,7 +236,7 @@ export default function SignInPage() {
           <p className="text-xs text-muted-foreground">
             By signing in, you agree to our{" "}
             <a
-              href={brand.termsOfUseUrl}
+              href="https://northend.law/terms-of-use"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
@@ -246,7 +245,7 @@ export default function SignInPage() {
             </a>{" "}
             and{" "}
             <a
-              href={brand.privacyPolicyUrl}
+              href="https://northend.law/privacy-policy"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
